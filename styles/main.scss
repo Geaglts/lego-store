@@ -75,6 +75,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          animation: 2s main-content 0.5s ease-in-out;
 
           h1 {
             position: relative;
@@ -119,7 +120,7 @@ body {
     justify-content: center;
     background-color: $white;
     position: absolute;
-    animation: loader 0.1s forwards;
+    animation: loader 2s forwards;
 
     div {
       height: 30px;
@@ -169,5 +170,14 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes main-content {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
