@@ -67,12 +67,37 @@ body {
       }
 
       main {
-        grid-row: 4 / 15;
-        background-color: tomato;
+        grid-row: 4 / 13;
+
+        .main-content {
+          width: 80%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h1 {
+            position: relative;
+            margin-bottom: 20px;
+
+            span {
+              position: absolute;
+              font-weight: 300;
+              font-size: 26pt;
+              top: -25px;
+              left: 50px;
+            }
+            font-size: 42pt;
+          }
+
+          p {
+            width: 65%;
+          }
+        }
       }
 
       footer {
-        grid-row: 15 / 21;
+        grid-row: 13 / 21;
         background-color: slategray;
       }
     }
@@ -94,7 +119,7 @@ body {
     justify-content: center;
     background-color: $white;
     position: absolute;
-    animation: loader 2s forwards;
+    animation: loader 0.1s forwards;
 
     div {
       height: 30px;
