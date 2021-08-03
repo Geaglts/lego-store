@@ -2,6 +2,7 @@ $white: #f8f8f8;
 $red: #d01012;
 $yellow: #ffcf00;
 $light-blue: #2dafe5;
+$font-family: "Lato", sans-serif;
 
 * {
   margin: 0;
@@ -11,12 +12,14 @@ $light-blue: #2dafe5;
 
 body {
   overflow: hidden;
+  font-family: $font-family;
 }
 
 .page {
   width: 100%;
   height: 100vh;
   position: relative;
+  background-color: $white;
 
   .main-content {
     height: 100%;
@@ -25,14 +28,42 @@ body {
     &--left {
       width: 55%;
       height: 100%;
-      background-color: royalblue;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(auto-fill, 5vh);
 
       header {
         grid-row: 1 / 4;
-        background-color: violet;
+
+        .navbar {
+          height: 100%;
+          margin-top: 25px;
+
+          .navbar__content {
+            display: flex;
+            align-items: center;
+            padding-left: 80px;
+            animation: 2s navbar 0.5s ease-in-out;
+
+            img {
+              width: 50px;
+            }
+
+            ul {
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+              width: 450px;
+
+              li {
+                a {
+                  color: $red;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
       }
 
       main {
@@ -63,7 +94,7 @@ body {
     justify-content: center;
     background-color: $white;
     position: absolute;
-    animation: loader 2.5s forwards;
+    animation: loader 2s forwards;
 
     div {
       height: 30px;
@@ -104,5 +135,14 @@ body {
   }
   50% {
     transform: scale(0.2);
+  }
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
