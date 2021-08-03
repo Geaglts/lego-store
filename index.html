@@ -97,9 +97,41 @@
         <div></div>
       </section>
       <!-- Modal -->
-      <section class="modal hidden">
+      <section class="modal">
         <div class="modal__content">
           <i class="close-modal fas fa-window-close"></i>
+
+          <div class="modal__content--slider">
+            <input type="radio" name="slider" id="radio1" checked />
+            <input type="radio" name="slider" id="radio2" />
+            <input type="radio" name="slider" id="radio3" />
+
+            <div class="cards">
+              <label for="radio1" id="card1" class="card">
+                <img
+                  src="assets/images/spider-man.png"
+                  alt="spider man"
+                  title="Imagen de spider man con una telaraña"
+                />
+              </label>
+              <label for="radio2" id="card2" class="card">
+                <img
+                  src="assets/images/spider-man-2.png"
+                  alt="spider man"
+                  title="Imagen de spider man con un escudo"
+                />
+              </label>
+              <label for="radio3" id="card3" class="card">
+                <img
+                  src="assets/images/spider-man-3.png"
+                  alt="spider man"
+                  title="Imagen de spider man de frente"
+                />
+              </label>
+            </div>
+          </div>
+
+          <button class="modal__content--submit">Lo quiero!</button>
         </div>
       </section>
     </div>
