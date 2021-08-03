@@ -106,7 +106,33 @@ body {
     &--right {
       width: calc(100vw - 55%);
       height: 100%;
-      background-color: rgb(90, 205, 148);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      p {
+        position: absolute;
+        left: 5%;
+        transform: rotate(-90deg);
+        font-size: 24pt;
+        animation: 2s side-content-text 0.5s ease-in-out;
+      }
+
+      img {
+        width: 50%;
+        z-index: 2;
+        animation: 1.5s side-content-image 1s ease-in-out;
+      }
+
+      div {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        background-color: $yellow;
+        z-index: 1;
+      }
     }
   }
 
@@ -121,6 +147,7 @@ body {
     background-color: $white;
     position: absolute;
     animation: loader 2s forwards;
+    z-index: 3;
 
     div {
       height: 30px;
@@ -179,5 +206,23 @@ body {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+@keyframes side-content-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes side-content-image {
+  0% {
+    transform: translateY(650px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
